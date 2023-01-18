@@ -7,7 +7,7 @@ const VideoHero = () => {
         <div className="videoHeroContainer">
 
             <div className="videoContainer">
-            <video src={video} type="video/mp4" controls autoPlay loop></video>
+            <video src={video} type="video/mp4" controls autoPlay loop muted></video>
             </div>
 
             <div className="videoHeroText">

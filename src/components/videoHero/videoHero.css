@@ -6,15 +6,16 @@
 }
 .videoContainer {
     margin: 20px;
-    flex: 4;
+    flex: 8;
 }
 
 
 .videoContainer>video {
-    border: 2px solid #00337C;
+    border-top: 1px solid #00337C;
+    border-left: 1px solid #00337C;
+    border-right: 1px solid #00337C;
     border-radius: 400px;
-    border-bottom: none;
-    width: 80%;
+    width: 100%;
     height: 80vh;
 }
 
@@ -51,4 +52,29 @@
     background-color: #fff;
     color: #00337C;
     border: 1px solid #00337C;
+}
+
+
+@media (max-width: 1000px) {
+    .videoHeroContainer{
+        flex-direction: column;
+    }
+
+    .videoHeroText {
+        margin: auto;
+    }
+}
+
+
+@media (max-width: 765px) {
+
+    .videoContainer>video {
+        border: none;
+        height: auto;
+    }
+
+    .videoHeroHeading {
+        font-size: 36px;
+    }
+
 }
