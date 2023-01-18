@@ -1,0 +1,57 @@
+.heroContainer {
+    background-image: url("https://images.pexels.com/photos/12750077/pexels-photo-12750077.jpeg");
+    height: 65vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    text-align: center;
+
+}
+
+.heroText {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    position: relative;
+    top: 150px;
+}
+
+
+.heroHeading {
+    font-size: 64px;
+    font-weight: 900;
+}
+
+.heroSubHeading {
+    font-size: 18px;
+}
+
+.heroButton {
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #00337C;
+    color: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.heroButton:hover {
+    background-color: #fff;
+    color: #00337C;
+}
+
+
+@media (max-width: 855px) {
+    .heroHeading {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 400px) {
+    .heroHeading {
+        font-size: 36px;
+    }
+}
