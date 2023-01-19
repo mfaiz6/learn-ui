@@ -7,12 +7,20 @@
 
 .topRatedPackContainer {
     display: flex;
-    gap: 30px;
+    gap: 12px;
+    flex-wrap: wrap;
 }
 
 .topRatedPackCard {
     margin: auto;
     cursor: pointer;
+    position: relative;
+}
+
+.topRatedPackCard:hover {
+    transform: scale(1.10, 1.10);
+    transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
+
 }
 
 .topRatedPackCardImg>img {
@@ -21,6 +29,49 @@
     border-radius: 5%;
 }
 
+.topRatedPackCardDuration{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    
+}
+
+.topRatedPackCardDuration>p {
+    font-size: 12px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.topRatedPackCardText {
+    display: flex;
+    flex-direction: column;
+}
+
 .topRatedPackCardHead {
     font-weight: 600;
+}
+
+.topRatedPackCardRating>.star {
+    font-size: 12px;
+}
+
+.topRatedPackCardOPrice {
+    text-decoration: line-through;
+    font-weight: 200;
+}
+
+.topRatedPackCardNPrice {
+    font-weight: 600;
+}
+
+@media (max-width: 900px) {
+    .TopRatedPackHeader {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 450px) {
+    .TopRatedPackHeader  {
+        font-size: 27px;
+    }
 }
