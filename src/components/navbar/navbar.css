@@ -16,6 +16,7 @@
 
 
 
+
 .navLogo>img {
     width: 320px;
     cursor: pointer;
@@ -32,6 +33,7 @@
 
 .navItem {
     cursor: pointer;
+    color: #fff;
 
 }
 

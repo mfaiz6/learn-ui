@@ -1,0 +1,93 @@
+.aboutContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.aboutMessageArea {
+    display: flex;
+    align-items: center;
+    gap: 44px;
+    padding: 120px;
+}
+
+.aboutMessageText{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    
+    text-align: justify;
+}
+
+.aboutMessageText>h2 {
+    font-size: 48px;
+}
+
+.aboutMessageText>h3 {
+    margin-top: 22px;
+}
+
+.aboutMessageText>h4 {
+    font-size: 32px;
+    font-weight: 300;
+}
+
+.aboutMessageText>h5 {
+    font-weight: normal;
+}
+
+
+
+.aboutMessageImage>img {
+    border-radius: 33px;
+    width: 800px;
+}
+
+
+
+@media (max-width: 1515px) {
+    .aboutMessageText>p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 1445px) {
+
+    .aboutMessageText>h2 {
+        font-size: 32px;
+    }
+
+    .aboutMessageText>p {
+        font-size: 10px;
+    }
+    
+    .aboutMessageImage>img {
+        width: 500px;
+    }
+    
+}
+
+@media (max-width: 1150px) {
+
+    .aboutMessageArea {
+        flex-wrap: wrap-reverse;
+        padding: 20px;
+        justify-content: center;
+    }
+    
+    .aboutMessageImage>img {
+        width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .aboutMessageText>h3 {
+        font-size: 13px;
+    }
+
+    .aboutMessageText>h4 {
+        font-size: 13px;
+    }
+
+}
