@@ -13,12 +13,12 @@ function App() {
     <>
       <Navbar />
       <Hero />
-      <VideoHero />
-      <TopRatedPackHero />
-      <PackageHero />
       <TopRatedHotelHero />
-      <Newsletter />
+      <VideoHero />
+      <PackageHero />
       <TopRatedPackHero />
+      <Newsletter />
+      <TopRatedHotelHero />
       <Footer />
     </>
   );

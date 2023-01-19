@@ -11,6 +11,7 @@
     top: 0;
     /* width: 100%; */
     z-index: 999;
+    /* margin: auto; */
 }
 
 
@@ -22,15 +23,16 @@
 
 
 .navItems {
-    margin: auto;
+    /* margin: auto; */
     background-color: #00337C;
     display: flex;
+    align-items: center;
     gap: 23px;
 }
 
 .navItem {
     cursor: pointer;
-    
+
 }
 
 .navItem:hover {
@@ -41,7 +43,20 @@
     display: none;
 }
 
+.enquiryButton {
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #fff;
+    color: #00337C;
+    border-radius: 20px;
+    cursor: pointer;
+}
 
+.enquiryButton:hover {
+    background-color: rgba(255, 255, 255, 0.729);
+    color: #00337C;
+}
 
 
 @media (max-width: 900px) {
@@ -65,7 +80,7 @@
         top: 120px;
         left: 0;
         z-index: 999;
-        }
+    }
 
     .navItem {
         padding: 20px;

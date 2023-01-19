@@ -27,8 +27,11 @@ const Navbar = () => {
                     <div className="navItem">Contact Us</div>
                     <div className="navItem">Sign in/up</div>
 
+                    <button className='enquiryButton'>Enquire Now</button>
 
                 </div>
+
+                
 
             </div>
         </>
