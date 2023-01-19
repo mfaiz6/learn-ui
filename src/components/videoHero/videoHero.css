@@ -4,6 +4,7 @@
     align-items: center;
     justify-content: space-between;
 }
+
 .videoContainer {
     margin: 20px;
     flex: 8;
@@ -14,7 +15,7 @@
     border-top: 1px solid #00337C;
     border-left: 1px solid #00337C;
     border-right: 1px solid #00337C;
-    border-radius: 400px;
+    border-radius: 20px;
     width: 100%;
     height: 80vh;
 }
@@ -56,7 +57,7 @@
 
 
 @media (max-width: 1000px) {
-    .videoHeroContainer{
+    .videoHeroContainer {
         flex-direction: column;
     }
 

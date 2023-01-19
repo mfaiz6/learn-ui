@@ -1,0 +1,56 @@
+.packageHeroHeader {
+    margin: 20px;
+    text-align: center;
+    font-size: 48px;
+}
+
+.pHeroContainer {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.pHeroCard {
+    position: relative;
+    cursor: pointer;
+}
+
+
+.pHeroCardImage {
+    width: 300px;
+
+}
+
+.pHeroCardImage>img{
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10%;
+}
+
+.pHeroCard:hover {
+    transform: scale(1.10, 1.10);
+    transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
+}
+
+.pHeroCardHeading {
+    position: absolute;
+    top: 4px;
+    left: 16px;
+    color: #fff;
+    font-size: 30px;
+}
+
+@media (max-width: 530px) {
+    .packageHeroHeader {
+        font-size: 38px;
+    }
+}
+
+@media (max-width: 400px) {
+    .packageHeroHeader {
+        font-size: 32px;
+    }
+}
