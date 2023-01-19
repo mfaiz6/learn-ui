@@ -1,4 +1,3 @@
-import { faStarHalf } from '@fortawesome/free-regular-svg-icons'
 import { faLocationDot, faStar, faStarHalfAlt } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './topRatedPackHero.css'
@@ -8,6 +7,7 @@ const TopRatedPackHero = () => {
         <>
 
             <h2 className='TopRatedPackHeader'>Top Rated Packages on Snow Kashmir</h2>
+
 
             <div className="topRatedPackContainer">
 
@@ -117,6 +117,7 @@ const TopRatedPackHero = () => {
                     </div>
 
                 </div>
+
 
             </div>
         </>
