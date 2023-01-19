@@ -1,0 +1,51 @@
+.fContainer {
+    width: 100%;
+    background-color: #00337C;
+}
+
+.linksContainer {
+    display: flex;
+    justify-content:center;
+    flex-wrap: wrap;
+    gap: 200px;
+    text-align: left;
+    margin: auto 70px;
+    padding: 38px;
+    color: #fff;
+    font-size: 12px;
+}
+
+.brandDetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    gap: 6px;
+    font-size: 12px;
+}
+
+
+.otherLinks>ul {
+    list-style: none;
+}
+
+.otherLinks>ul>li {
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+
+.footerContent>p {
+    text-align: center;
+    color: #fff;
+    font-size: 13px;
+}
+
+
+@media (max-width: 765px) {
+    .linksContainer {
+        gap: 20px;
+        justify-content: left;
+        margin: auto;
+    }
+}

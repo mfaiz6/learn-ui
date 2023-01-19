@@ -22,12 +22,12 @@
     width: 50%;
     position: absolute;
     top: 100px;
-    left:25%;
+    left: 25%;
     height: 200px;
 }
 
 .nLetterHeading {
-    font-size: 48px;
+    font-size: 46px;
 }
 
 .nLetterInput {
@@ -69,6 +69,5 @@
 @media (max-width: 465px) {
     .nLetterHeading {
         font-size: 18px;
-        ;
     }
 }

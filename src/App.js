@@ -1,4 +1,5 @@
 import './App.css';
+import Footer from './components/footer/Footer';
 import Hero from './components/hero/Hero';
 import Navbar from './components/navbar/Navbar';
 import Newsletter from './components/newsletter/Newsletter';
@@ -17,6 +18,8 @@ function App() {
       <PackageHero />
       <TopRatedHotelHero />
       <Newsletter />
+      <TopRatedPackHero />
+      <Footer />
     </>
   );
 }
