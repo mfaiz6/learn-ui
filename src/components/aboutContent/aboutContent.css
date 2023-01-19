@@ -11,11 +11,11 @@
     padding: 120px;
 }
 
-.aboutMessageText{
+.aboutMessageText {
     text-align: left;
     display: flex;
     flex-direction: column;
-    
+
     text-align: justify;
 }
 
@@ -45,6 +45,43 @@
 
 
 
+
+.aboutOurTeamArea {
+    display: flex;
+    gap: 40px;
+    padding: 33px;
+    align-items: center;
+}
+
+.aboutOurTeamCard {
+    padding: 22px;
+    width: 50%;
+}
+
+
+.aboutOurTeamCardImage>img {
+    width: 100%;
+    border-radius: 22px;
+}
+
+.aboutOurTeamCardText {
+    display: flex;
+    flex-direction: column;
+}
+
+.aboutOurTeamCardText>h3 {
+    font-weight: 500;
+}
+
+.aboutOurTeamCardText>p {
+    font-size: 14px;
+    text-align: justify;
+    font-weight: 300;
+
+}
+
+
+
 @media (max-width: 1515px) {
     .aboutMessageText>p {
         font-size: 14px;
@@ -60,12 +97,13 @@
     .aboutMessageText>p {
         font-size: 10px;
     }
-    
+
     .aboutMessageImage>img {
         width: 500px;
     }
-    
+
 }
+
 
 @media (max-width: 1150px) {
 
@@ -74,7 +112,7 @@
         padding: 20px;
         justify-content: center;
     }
-    
+
     .aboutMessageImage>img {
         width: 300px;
     }
@@ -90,4 +128,16 @@
         font-size: 13px;
     }
 
+}
+
+
+@media (max-width: 1000px) {
+    .aboutOurTeamArea {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .aboutOurTeamCard {
+        width: 100%;
+    }
 }

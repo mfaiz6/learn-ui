@@ -1,3 +1,4 @@
+import Newsletter from '../newsletter/Newsletter'
 import './aboutContent.css'
 
 const AboutContent = () => {
@@ -21,6 +22,8 @@ const AboutContent = () => {
                     </div>
 
                 </div>
+
+                <Newsletter />
 
 
 
