@@ -3,6 +3,7 @@ import './packageHero.css'
 const PackageHero = () => {
     return (
         <>
+        
             <h1 className='packageHeroHeader'>Popular Destinations</h1>
             <div className="pHeroContainer">
 

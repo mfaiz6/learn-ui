@@ -1,0 +1,26 @@
+.TopRatedPackHeader {
+    margin: 20px;
+    text-align: center;
+    font-size: 48px;
+}
+
+
+.topRatedPackContainer {
+    display: flex;
+    gap: 30px;
+}
+
+.topRatedPackCard {
+    margin: auto;
+    cursor: pointer;
+}
+
+.topRatedPackCardImg>img {
+    width: 21em;
+    height: 15em;
+    border-radius: 5%;
+}
+
+.topRatedPackCardHead {
+    font-weight: 600;
+}
