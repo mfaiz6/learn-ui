@@ -26,6 +26,17 @@ const Footer = () => {
                         </ul>
                     </div>
 
+                    <div className="otherLinks">
+                        <ul>
+                            <li>Terms & Conditions</li>
+                            <li>Privacy Policies</li>
+                            <li>Support</li>
+                            <li>Partner with us</li>
+                        </ul>
+                    </div>
+
+                    
+
                 </div>
 
                 <div className="footerContent">

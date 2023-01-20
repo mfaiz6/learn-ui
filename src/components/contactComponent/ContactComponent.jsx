@@ -111,6 +111,7 @@ const ContactComponent = () => {
                     </div>
 
                 </div>
+                
 
                 <hr />
 
