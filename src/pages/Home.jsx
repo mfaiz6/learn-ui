@@ -1,3 +1,4 @@
+import BlogHero from '../components/blogHero/BlogHero';
 import Footer from '../components/footer/Footer';
 import Hero from '../components/hero/Hero';
 import Navbar from '../components/navbar/Navbar';
@@ -13,12 +14,12 @@ const Home = () => {
         <>
             <Navbar />
             <Hero />
-            <TopRatedHotelHero />
-            <VideoHero />
-            <PackageHero />
             <TopRatedPackHero />
+            <VideoHero />
             <Newsletter />
+            <PackageHero />
             <TopRatedHotelHero />
+            <BlogHero />
             <Footer />
         </>
     )
