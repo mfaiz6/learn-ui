@@ -1,14 +1,13 @@
 .aboutContainer {
     display: flex;
     flex-direction: column;
-    gap: 100px;
 }
 
 .aboutMessageArea {
     display: flex;
     align-items: center;
     gap: 44px;
-    padding: 120px;
+    padding: 80px;
 }
 
 .aboutMessageText {

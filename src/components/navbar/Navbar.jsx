@@ -26,7 +26,7 @@ const Navbar = () => {
                     <div className="navItem">Packages</div>
                     <div className="navItem">Blog</div>
                     <Link to="/about"><div className="navItem">About</div></Link>
-                    <div className="navItem">Contact</div>
+                    <Link to="/contact"><div className="navItem">Contact</div></Link>
                     <div className="navItem">Signin</div>
                     <div className="navItem">Signup</div>
 
