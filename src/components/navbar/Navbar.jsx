@@ -27,7 +27,7 @@ const Navbar = () => {
                     <Link to="/blog"><div className="navItem">Blog</div></Link>
                     <Link to="/about"><div className="navItem">About</div></Link>
                     <Link to="/contact"><div className="navItem">Contact</div></Link>
-                    <div className="navItem">Signin</div>
+                    <Link to="/signin"><div className="navItem">Signin</div></Link>
                     <div className="navItem">Signup</div>
 
                     <button className='enquiryButton'>Enquire Now</button>

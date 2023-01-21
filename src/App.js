@@ -5,6 +5,7 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Blog from './pages/Blog';
 import Packages from './pages/Packages';
+import Signin from './pages/Signin';
 
 
 function App() {
@@ -30,6 +31,10 @@ function App() {
     {
       path: "/packages",
       element: <Packages />
+    },
+    {
+      path: "/signin",
+      element: <Signin/>
     },
 
   ])
