@@ -4,18 +4,25 @@ const SigninComponent = () => {
     return (
         <>
 
-            <div className="signinContainer">
+            <div className="signinForm">
 
-                <h1>Sign In</h1>
+                <div className='form'>
 
-                <div className="signinForm">
+                    <h1 className='signinTitle'>Sign In</h1>
 
-                    <input type="email" placeholder='email' />
-                    <input type="password" placeholder='password' />
+                    
 
-                    <span className='signinFg'>Forgot password?</span>
+                    <div className="inputContainer">
+                        <input type="email" className='input' placeholder='a' />
+                        <label htmlFor="" className='label'>Email</label>
+                    </div>
 
-                    <button className='signInButton'>Sign in</button>
+                    <div className="inputContainer">
+                        <input type="password" className='input' placeholder='a' />
+                        <label htmlFor="" className='label'>Password</label>
+                    </div>
+
+                    <input type="submit" value="Sign In" className='signInButton' />
 
                 </div>
 
