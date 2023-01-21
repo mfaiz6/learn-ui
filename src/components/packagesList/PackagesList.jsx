@@ -37,7 +37,8 @@ const PackagesList = () => {
                                 <FontAwesomeIcon icon={faStar} className="star" />
                             </p>
 
-                            <h4>Lorem ipsum dolor sit amet.</h4>
+                            <h4>4 Days - 5 Nights</h4>
+                            
 
                         </div>
 
@@ -86,7 +87,7 @@ const PackagesList = () => {
                                 <FontAwesomeIcon icon={faStar} className="star" />
                             </p>
 
-                            <h4>Lorem ipsum dolor sit amet.</h4>
+                            <h4>4 Days - 5 Nights</h4>
 
                         </div>
 
@@ -133,7 +134,7 @@ const PackagesList = () => {
                                 <FontAwesomeIcon icon={faStar} className="star" />
                             </p>
 
-                            <h4>Lorem ipsum dolor sit amet.</h4>
+                            <h4>4 Days - 5 Nights</h4>
 
                         </div>
 
@@ -180,7 +181,7 @@ const PackagesList = () => {
                                 <FontAwesomeIcon icon={faStar} className="star" />
                             </p>
 
-                            <h4>Lorem ipsum dolor sit amet.</h4>
+                            <h4>4 Days - 5 Nights</h4>
 
                         </div>
 
@@ -227,7 +228,7 @@ const PackagesList = () => {
                                 <FontAwesomeIcon icon={faStar} className="star" />
                             </p>
 
-                            <h4>Lorem ipsum dolor sit amet.</h4>
+                            <h4>4 Days - 5 Nights</h4>
 
                         </div>
 
@@ -274,7 +275,7 @@ const PackagesList = () => {
                                 <FontAwesomeIcon icon={faStar} className="star" />
                             </p>
 
-                            <h4>Lorem ipsum dolor sit amet.</h4>
+                            <h4>4 Days - 5 Nights</h4>
 
                         </div>
 
@@ -321,7 +322,7 @@ const PackagesList = () => {
                                 <FontAwesomeIcon icon={faStar} className="star" />
                             </p>
 
-                            <h4>Lorem ipsum dolor sit amet.</h4>
+                            <h4>4 Days - 5 Nights</h4>
 
                         </div>
 
@@ -368,7 +369,7 @@ const PackagesList = () => {
                                 <FontAwesomeIcon icon={faStar} className="star" />
                             </p>
 
-                            <h4>Lorem ipsum dolor sit amet.</h4>
+                            <h4>4 Days - 5 Nights</h4>
 
                         </div>
 

@@ -6,6 +6,7 @@ import Contact from './pages/Contact';
 import Blog from './pages/Blog';
 import Packages from './pages/Packages';
 import Signin from './pages/Signin';
+import Singup from './pages/Singup';
 
 
 function App() {
@@ -35,6 +36,10 @@ function App() {
     {
       path: "/signin",
       element: <Signin/>
+    },
+    {
+      path: "/signup",
+      element: <Singup />
     },
 
   ])
