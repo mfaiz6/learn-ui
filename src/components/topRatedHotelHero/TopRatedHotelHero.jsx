@@ -1,4 +1,4 @@
-import { faLocationDot, faStar, faStarHalfAlt } from '@fortawesome/free-solid-svg-icons'
+import { faLocationDot, faStar } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './topRatedHotelHero.css'
 
@@ -6,7 +6,7 @@ const TopRatedHotelHero = () => {
     return (
         <>
 
-            <h2 className='TopRatedPackHeader'>Top Rated Packages on Snow Kashmir</h2>
+            <h2 className='TopRatedPackHeader'>Top Rated Hotels on Snow Kashmir</h2>
 
 
             <div className="topRatedPackContainer">

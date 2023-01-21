@@ -26,12 +26,12 @@ const TopRatedPackHero = () => {
 
                     <div className="topRatedPackCardText">
                         <h3 className='topRatedPackCardHead'>Thrilling Tour</h3>
-                        <p className="topRatedPackCardRating"> 
-                        <FontAwesomeIcon icon={faStar} className="star" />
-                        <FontAwesomeIcon icon={faStar} className="star" />
-                        <FontAwesomeIcon icon={faStar} className="star" />
-                        <FontAwesomeIcon icon={faStar} className="star" />
-                        <FontAwesomeIcon icon={faStar} className="star" />
+                        <p className="topRatedPackCardRating">
+                            <FontAwesomeIcon icon={faStar} className="star" />
+                            <FontAwesomeIcon icon={faStar} className="star" />
+                            <FontAwesomeIcon icon={faStar} className="star" />
+                            <FontAwesomeIcon icon={faStar} className="star" />
+                            <FontAwesomeIcon icon={faStar} className="star" />
                         </p>
                         <h4 className="topRatedPackCardOPrice">₹21999</h4>
                         <h4 className="topRatedPackCardNPrice">₹17999</h4>
@@ -54,11 +54,11 @@ const TopRatedPackHero = () => {
 
                     <div className="topRatedPackCardText">
                         <h3 className='topRatedPackCardHead'>Thrilling Tour</h3>
-                        <p className="topRatedPackCardRating"> 
-                        <FontAwesomeIcon icon={faStar} className="star" />
-                        <FontAwesomeIcon icon={faStar} className="star" />
-                        <FontAwesomeIcon icon={faStar} className="star" />
-                        <FontAwesomeIcon icon={faStarHalfAlt} className="star" />
+                        <p className="topRatedPackCardRating">
+                            <FontAwesomeIcon icon={faStar} className="star" />
+                            <FontAwesomeIcon icon={faStar} className="star" />
+                            <FontAwesomeIcon icon={faStar} className="star" />
+                            <FontAwesomeIcon icon={faStarHalfAlt} className="star" />
                         </p>
                         <h4 className="topRatedPackCardOPrice">₹21999</h4>
                         <h4 className="topRatedPackCardNPrice">₹17999</h4>
@@ -81,10 +81,10 @@ const TopRatedPackHero = () => {
 
                     <div className="topRatedPackCardText">
                         <h3 className='topRatedPackCardHead'>Thrilling Tour</h3>
-                        <p className="topRatedPackCardRating"> 
-                        <FontAwesomeIcon icon={faStar} className="star" />
-                        <FontAwesomeIcon icon={faStar} className="star" />
-                        <FontAwesomeIcon icon={faStar} className="star" />
+                        <p className="topRatedPackCardRating">
+                            <FontAwesomeIcon icon={faStar} className="star" />
+                            <FontAwesomeIcon icon={faStar} className="star" />
+                            <FontAwesomeIcon icon={faStar} className="star" />
                         </p>
                         <h4 className="topRatedPackCardOPrice">₹21999</h4>
                         <h4 className="topRatedPackCardNPrice">₹17999</h4>
@@ -107,10 +107,10 @@ const TopRatedPackHero = () => {
 
                     <div className="topRatedPackCardText">
                         <h3 className='topRatedPackCardHead'>Thrilling Tour</h3>
-                        <p className="topRatedPackCardRating"> 
-                        <FontAwesomeIcon icon={faStar} className="star" />
-                        <FontAwesomeIcon icon={faStar} className="star" />
-                        <FontAwesomeIcon icon={faStar} className="star" />
+                        <p className="topRatedPackCardRating">
+                            <FontAwesomeIcon icon={faStar} className="star" />
+                            <FontAwesomeIcon icon={faStar} className="star" />
+                            <FontAwesomeIcon icon={faStar} className="star" />
                         </p>
                         <h4 className="topRatedPackCardOPrice">₹21999</h4>
                         <h4 className="topRatedPackCardNPrice">₹17999</h4>

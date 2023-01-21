@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Blog from './pages/Blog';
+import Packages from './pages/Packages';
 
 
 function App() {
@@ -25,6 +26,10 @@ function App() {
     {
       path: "/blog",
       element: <Blog />
+    },
+    {
+      path: "/packages",
+      element: <Packages />
     },
 
   ])

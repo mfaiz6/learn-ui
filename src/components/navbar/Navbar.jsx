@@ -23,7 +23,7 @@ const Navbar = () => {
                 <div className={toggle ? "navItemsShow" : "navItems"}>
 
                     <Link to="/"><div className="navItem">Home</div></Link>
-                    <div className="navItem">Packages</div>
+                    <Link to="/packages"><div className="navItem">Packages</div></Link>
                     <Link to="/blog"><div className="navItem">Blog</div></Link>
                     <Link to="/about"><div className="navItem">About</div></Link>
                     <Link to="/contact"><div className="navItem">Contact</div></Link>
