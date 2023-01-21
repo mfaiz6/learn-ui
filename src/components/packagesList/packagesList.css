@@ -1,3 +1,23 @@
+.diffLocations {
+    margin-top: 20px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.diffLocations>span {
+    font-weight: 400;
+    display: inline;
+    margin-right: 20px;
+    border: 1px solid #00337C;
+    padding: 6px;
+    cursor: pointer;
+}
+
+.active {
+    background-color: #00337C;
+    color: #fff;
+}
+
 .packagesListContainer {
     margin: auto;
     width: 80%;

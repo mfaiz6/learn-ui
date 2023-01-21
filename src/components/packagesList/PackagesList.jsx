@@ -6,6 +6,13 @@ const PackagesList = () => {
     return (
         <>
 
+            <div className="diffLocations">
+                <span className='all active'>All</span>
+                <span className='kashmir'>Kashmir</span>
+                <span className='ladakh'>Ladakh</span>
+                <span className='jammu'>Jammu</span>
+            </div>
+
             <div className="packagesListContainer">
 
 
