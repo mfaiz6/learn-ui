@@ -17,14 +17,11 @@ const Footer = () => {
                         <span><FontAwesomeIcon icon={faLocationDot} /> Batmaloo, Srinagar, J&K - 190001</span>
                     </div>
 
-                    <div className="otherLinks">
-                        <ul>
-                            <li>Terms & Conditions</li>
-                            <li>Privacy Policies</li>
-                            <li>Support</li>
-                            <li>Partner with us</li>
-                        </ul>
+
+                    <div className="brandDetails">
+                        <img src="https://www.dukekashmirtravels.com/images/online.png" alt="" />
                     </div>
+
 
                     <div className="otherLinks">
                         <ul>
@@ -35,9 +32,17 @@ const Footer = () => {
                         </ul>
                     </div>
 
-                    
+                    <div className="otherLinks">
+                        <ul>
+                            <li>Terms & Conditions</li>
+                            <li>Privacy Policies</li>
+                            <li>Support</li>
+                            <li>Partner with us</li>
+                        </ul>
+                    </div>
 
                 </div>
+
 
                 <div className="footerContent">
 

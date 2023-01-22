@@ -3,7 +3,8 @@
     height: 120px;
     display: flex;
     justify-content: space-between;
-    background-color: #00337C;
+    /* background-color: #00337C; */
+    background-color: #0E1E2C;
     align-items: center;
     padding: 22px;
     color: #fff;
@@ -25,7 +26,8 @@
 
 .navItems {
     /* margin: auto; */
-    background-color: #00337C;
+    /* background-color: #00337C; */
+    background-color: #0E1E2C;
     display: flex;
     align-items: center;
     gap: 23px;
@@ -38,7 +40,8 @@
 }
 
 .navItem:hover {
-    border-bottom: 2px #fff solid;
+    /* border-bottom: 2px #fff solid; */
+    border-bottom: 2px #FFD800 solid ;
 }
 
 .toggleButton {
@@ -49,15 +52,19 @@
     font-size: 18px;
     padding: 10px 20px;
     border: none;
-    background-color: #fff;
-    color: #00337C;
+    /* background-color: #fff; */
+    background-color: #FFD800;
+    /* color: #00337C; */
+    color: #000;
     border-radius: 20px;
     cursor: pointer;
 }
 
 .enquiryButton:hover {
-    background-color: rgba(255, 255, 255, 0.729);
-    color: #00337C;
+    /* background-color: rgba(255, 255, 255, 0.729); */
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #FFD800;
 }
 
 
