@@ -35,6 +35,16 @@
     cursor: pointer;
 }
 
+.socialDetails {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: left;
+    gap: 20px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
 
 .footerContent>p {
     text-align: center;

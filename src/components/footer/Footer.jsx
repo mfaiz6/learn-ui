@@ -1,6 +1,7 @@
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
 import { faLocationDot, faPhone } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFacebook, faInstagram, faTwitter, faWhatsapp } from "@fortawesome/free-brands-svg-icons"
 import './footer.css'
 
 const Footer = () => {
@@ -32,13 +33,11 @@ const Footer = () => {
                         </ul>
                     </div>
 
-                    <div className="otherLinks">
-                        <ul>
-                            <li>Terms & Conditions</li>
-                            <li>Privacy Policies</li>
-                            <li>Support</li>
-                            <li>Partner with us</li>
-                        </ul>
+                    <div className="socialDetails">
+                        <span><FontAwesomeIcon icon={faFacebook} /></span>
+                        <span><FontAwesomeIcon icon={faInstagram} /></span>
+                        <span><FontAwesomeIcon icon={faTwitter} /></span>
+                        <span><FontAwesomeIcon icon={faWhatsapp} /></span>
                     </div>
 
                 </div>
