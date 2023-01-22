@@ -79,6 +79,12 @@
     color: rgb(46, 197, 46);
 }
 
+.packageDetailsTextAdds>.addIcons {
+    margin-top: 8px;
+    font-size: 22px;
+    margin-right: 10px;
+}
+
 .packageDetailsTextRating {
     font-size: 13px;
 }

@@ -1,4 +1,4 @@
-import { faLocationDot, faStar, faStarHalfAlt } from '@fortawesome/free-solid-svg-icons'
+import { faBed, faBinoculars, faLocationDot, faStar, faStarHalfAlt, faTaxi, faUtensils, faWifi } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './topRatedPackHero.css'
 
@@ -26,6 +26,15 @@ const TopRatedPackHero = () => {
 
                     <div className="topRatedPackCardText">
                         <h3 className='topRatedPackCardHead'>Thrilling Tour</h3>
+
+                        <p className="topRatedPackCardAdds">
+                            <FontAwesomeIcon icon={faUtensils} className="addIcons" />
+                            <FontAwesomeIcon icon={faBed} className="addIcons" />
+                            <FontAwesomeIcon icon={faTaxi} className="addIcons" />
+                            <FontAwesomeIcon icon={faBinoculars} className="addIcons" />
+                            <FontAwesomeIcon icon={faWifi} className="addIcons" />
+                        </p>
+
                         <p className="topRatedPackCardRating">
                             <FontAwesomeIcon icon={faStar} className="star" />
                             <FontAwesomeIcon icon={faStar} className="star" />
@@ -34,7 +43,7 @@ const TopRatedPackHero = () => {
                             <FontAwesomeIcon icon={faStar} className="star" />
                         </p>
                         <h4 className="topRatedPackCardOPrice">₹21999</h4>
-                        <h4 className="topRatedPackCardNPrice">₹17999</h4>
+                        <h4 className="topRatedPackCardNPrice">₹17999 <span>per person</span></h4>
                     </div>
 
                 </div>
@@ -54,6 +63,15 @@ const TopRatedPackHero = () => {
 
                     <div className="topRatedPackCardText">
                         <h3 className='topRatedPackCardHead'>Thrilling Tour</h3>
+
+                        <p className="topRatedPackCardAdds">
+                            <FontAwesomeIcon icon={faUtensils} className="addIcons" />
+                            <FontAwesomeIcon icon={faBed} className="addIcons" />
+                            <FontAwesomeIcon icon={faTaxi} className="addIcons" />
+                            <FontAwesomeIcon icon={faBinoculars} className="addIcons" />
+                            <FontAwesomeIcon icon={faWifi} className="addIcons" />
+                        </p>
+
                         <p className="topRatedPackCardRating">
                             <FontAwesomeIcon icon={faStar} className="star" />
                             <FontAwesomeIcon icon={faStar} className="star" />
@@ -61,7 +79,7 @@ const TopRatedPackHero = () => {
                             <FontAwesomeIcon icon={faStarHalfAlt} className="star" />
                         </p>
                         <h4 className="topRatedPackCardOPrice">₹21999</h4>
-                        <h4 className="topRatedPackCardNPrice">₹17999</h4>
+                        <h4 className="topRatedPackCardNPrice">₹17999 <span>per person</span></h4>
                     </div>
 
                 </div>
@@ -81,13 +99,20 @@ const TopRatedPackHero = () => {
 
                     <div className="topRatedPackCardText">
                         <h3 className='topRatedPackCardHead'>Thrilling Tour</h3>
+                        <p className="topRatedPackCardAdds">
+                            <FontAwesomeIcon icon={faUtensils} className="addIcons" />
+                            <FontAwesomeIcon icon={faBed} className="addIcons" />
+                            <FontAwesomeIcon icon={faTaxi} className="addIcons" />
+                            <FontAwesomeIcon icon={faBinoculars} className="addIcons" />
+                            <FontAwesomeIcon icon={faWifi} className="addIcons" />
+                        </p>
                         <p className="topRatedPackCardRating">
                             <FontAwesomeIcon icon={faStar} className="star" />
                             <FontAwesomeIcon icon={faStar} className="star" />
                             <FontAwesomeIcon icon={faStar} className="star" />
                         </p>
                         <h4 className="topRatedPackCardOPrice">₹21999</h4>
-                        <h4 className="topRatedPackCardNPrice">₹17999</h4>
+                        <h4 className="topRatedPackCardNPrice">₹17999 <span>per person</span></h4>
                     </div>
 
                 </div>
@@ -107,13 +132,19 @@ const TopRatedPackHero = () => {
 
                     <div className="topRatedPackCardText">
                         <h3 className='topRatedPackCardHead'>Thrilling Tour</h3>
+                        <p className="topRatedPackCardAdds">
+                            <FontAwesomeIcon icon={faBed} className="addIcons" />
+                            <FontAwesomeIcon icon={faTaxi} className="addIcons" />
+                            <FontAwesomeIcon icon={faBinoculars} className="addIcons" />
+                            <FontAwesomeIcon icon={faWifi} className="addIcons" />
+                        </p>
                         <p className="topRatedPackCardRating">
                             <FontAwesomeIcon icon={faStar} className="star" />
                             <FontAwesomeIcon icon={faStar} className="star" />
                             <FontAwesomeIcon icon={faStar} className="star" />
                         </p>
                         <h4 className="topRatedPackCardOPrice">₹21999</h4>
-                        <h4 className="topRatedPackCardNPrice">₹17999</h4>
+                        <h4 className="topRatedPackCardNPrice">₹17999 <span>per person</span></h4>
                     </div>
 
                 </div>

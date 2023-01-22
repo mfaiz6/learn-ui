@@ -1,4 +1,4 @@
-import { faLocationDot, faStar } from '@fortawesome/free-solid-svg-icons'
+import { faLocationDot, faStar, faWifi } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './topRatedHotelHero.css'
 
@@ -26,6 +26,11 @@ const TopRatedHotelHero = () => {
 
                     <div className="topRatedPackCardText">
                         <h3 className='topRatedPackCardHead'>Vivanta Dal View</h3>
+
+                        <p className="topRatedPackCardAdds">
+                            <FontAwesomeIcon icon={faWifi} className="addIcon" />
+                        </p>
+
                         <p className="topRatedPackCardRating">
                             <FontAwesomeIcon icon={faStar} className="star" />
                             <FontAwesomeIcon icon={faStar} className="star" />
@@ -55,6 +60,10 @@ const TopRatedHotelHero = () => {
 
                     <div className="topRatedPackCardText">
                         <h3 className='topRatedPackCardHead'>Vivanta Dal View</h3>
+
+                        <p className="topRatedPackCardAdds">
+                            <FontAwesomeIcon icon={faWifi} className="addIcon" />
+                        </p>
                         <p className="topRatedPackCardRating">
                             <FontAwesomeIcon icon={faStar} className="star" />
                             <FontAwesomeIcon icon={faStar} className="star" />
@@ -85,6 +94,10 @@ const TopRatedHotelHero = () => {
 
                     <div className="topRatedPackCardText">
                         <h3 className='topRatedPackCardHead'>Vivanta Dal View</h3>
+
+                        <p className="topRatedPackCardAdds">
+                            <FontAwesomeIcon icon={faWifi} className="addIcon" />
+                        </p>
                         <p className="topRatedPackCardRating">
                             <FontAwesomeIcon icon={faStar} className="star" />
                             <FontAwesomeIcon icon={faStar} className="star" />
@@ -115,6 +128,10 @@ const TopRatedHotelHero = () => {
 
                     <div className="topRatedPackCardText">
                         <h3 className='topRatedPackCardHead'>Vivanta Dal View</h3>
+
+                        <p className="topRatedPackCardAdds">
+                            <FontAwesomeIcon icon={faWifi} className="addIcon" />
+                        </p>
                         <p className="topRatedPackCardRating">
                             <FontAwesomeIcon icon={faStar} className="star" />
                             <FontAwesomeIcon icon={faStar} className="star" />

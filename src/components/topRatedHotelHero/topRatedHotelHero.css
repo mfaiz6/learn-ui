@@ -53,6 +53,11 @@
     font-weight: 600;
 }
 
+.topRatedPackCardAdds>.addIcon {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
 .topRatedPackCardRating>.star {
     font-size: 12px;
 }
