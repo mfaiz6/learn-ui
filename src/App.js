@@ -7,6 +7,8 @@ import Blog from './pages/Blog';
 import Packages from './pages/Packages';
 import Signin from './pages/Signin';
 import Singup from './pages/Singup';
+import QueryModal from './pages/QueryModal';
+
 
 
 function App() {
@@ -35,14 +37,19 @@ function App() {
     },
     {
       path: "/signin",
-      element: <Signin/>
+      element: <Signin />
     },
     {
       path: "/signup",
       element: <Singup />
     },
-
+    {
+      path: "/queryModal",
+      element: <QueryModal />
+    },
+    
   ])
+
 
 
   return (
