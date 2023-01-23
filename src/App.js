@@ -8,7 +8,7 @@ import Packages from './pages/Packages';
 import Signin from './pages/Signin';
 import Singup from './pages/Singup';
 import QueryModal from './pages/QueryModal';
-
+import ScrollToTop from '../src/components/ScrollToTop.jsx'
 
 
 function App() {
@@ -17,35 +17,35 @@ function App() {
 
     {
       path: "/",
-      element: <Home />
+      element: <><ScrollToTop/><Home /></>
     },
     {
       path: "/about",
-      element: <About />
+      element: <><ScrollToTop/><About /></>
     },
     {
       path: "/contact",
-      element: <Contact />
+      element: <><ScrollToTop/><Contact /></>
     },
     {
       path: "/blog",
-      element: <Blog />
+      element: <><ScrollToTop/><Blog /></>
     },
     {
       path: "/packages",
-      element: <Packages />
+      element: <><ScrollToTop/><Packages /></>
     },
     {
       path: "/signin",
-      element: <Signin />
+      element: <><ScrollToTop/><Signin /></>
     },
     {
       path: "/signup",
-      element: <Singup />
+      element: <><ScrollToTop/><Singup /></>
     },
     {
       path: "/queryModal",
-      element: <QueryModal />
+      element: <><ScrollToTop/><QueryModal /></>
     },
     
   ])
