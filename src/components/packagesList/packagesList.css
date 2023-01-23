@@ -74,9 +74,13 @@
 }
 
 .packageDetailsText>h4 {
+    border: 1px solid  rgb(46, 197, 46);
     font-weight: normal;
     font-size: 12px;
-    color: rgb(46, 197, 46);
+    width:fit-content;
+    padding: 2px;
+    /* color: rgb(46, 197, 46); */
+    /* color: rgb(46, 197, 46); */
 }
 
 .packageDetailsTextAdds>.addIcons {
