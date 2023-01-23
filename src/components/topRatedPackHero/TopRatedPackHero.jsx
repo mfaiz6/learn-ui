@@ -1,5 +1,6 @@
 import { faBed, faBinoculars, faLocationDot, faStar, faStarHalfAlt, faTaxi, faUtensils, faWifi } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Link } from 'react-router-dom'
 import './topRatedPackHero.css'
 
 const TopRatedPackHero = () => {
@@ -25,7 +26,7 @@ const TopRatedPackHero = () => {
                     </div>
 
                     <div className="topRatedPackCardText">
-                        <h3 className='topRatedPackCardHead'>Thrilling Tour</h3>
+                        <Link to="/packages/:id"><h3 className='topRatedPackCardHead'>Thrilling Tour</h3></Link>
 
                         <p className="topRatedPackCardAdds">
                             <FontAwesomeIcon icon={faUtensils} className="addIcons" />
@@ -62,7 +63,7 @@ const TopRatedPackHero = () => {
                     </div>
 
                     <div className="topRatedPackCardText">
-                        <h3 className='topRatedPackCardHead'>Thrilling Tour</h3>
+                        <Link to="/packages/:id"><h3 className='topRatedPackCardHead'>Thrilling Tour</h3></Link>
 
                         <p className="topRatedPackCardAdds">
                             <FontAwesomeIcon icon={faUtensils} className="addIcons" />
@@ -98,7 +99,7 @@ const TopRatedPackHero = () => {
                     </div>
 
                     <div className="topRatedPackCardText">
-                        <h3 className='topRatedPackCardHead'>Thrilling Tour</h3>
+                        <Link to="/packages/:id"><h3 className='topRatedPackCardHead'>Thrilling Tour</h3></Link>
                         <p className="topRatedPackCardAdds">
                             <FontAwesomeIcon icon={faUtensils} className="addIcons" />
                             <FontAwesomeIcon icon={faBed} className="addIcons" />
@@ -131,7 +132,7 @@ const TopRatedPackHero = () => {
                     </div>
 
                     <div className="topRatedPackCardText">
-                        <h3 className='topRatedPackCardHead'>Thrilling Tour</h3>
+                        <Link to="/packages/:id"><h3 className='topRatedPackCardHead'>Thrilling Tour</h3></Link>
                         <p className="topRatedPackCardAdds">
                             <FontAwesomeIcon icon={faBed} className="addIcons" />
                             <FontAwesomeIcon icon={faTaxi} className="addIcons" />
