@@ -115,7 +115,7 @@
     font-weight: normal;
 }
 
-.packageListItemPrice>button {
+.pacakgeListItemButton {
     font-size: 20px;
     margin-top: 10px;
     font-size: 18px;
@@ -130,7 +130,7 @@
     cursor: pointer;
 }
 
-.packageListItemPrice>button:hover {
+pacakgeListItemButton:hover {
     background-color: #fff;
     /* color: #00337C; */
     color: #000;
