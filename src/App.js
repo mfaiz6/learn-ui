@@ -9,6 +9,7 @@ import Signin from './pages/Signin';
 import Singup from './pages/Singup';
 import QueryModal from './pages/QueryModal';
 import ScrollToTop from '../src/components/ScrollToTop.jsx'
+import Package from './pages/Package';
 
 
 function App() {
@@ -46,6 +47,10 @@ function App() {
     {
       path: "/queryModal",
       element: <><ScrollToTop/><QueryModal /></>
+    },
+    {
+      path: "/packages/:id",
+      element: <><ScrollToTop/><Package /></>
     },
     
   ])
