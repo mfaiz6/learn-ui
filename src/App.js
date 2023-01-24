@@ -10,6 +10,8 @@ import Singup from './pages/Singup';
 import QueryModal from './pages/QueryModal';
 import ScrollToTop from '../src/components/ScrollToTop.jsx'
 import Package from './pages/Package';
+import ABlog from './pages/ABlog';
+import Error from './pages/Error';
 
 
 function App() {
@@ -51,6 +53,14 @@ function App() {
     {
       path: "/packages/:id",
       element: <><ScrollToTop/><Package /></>
+    },
+    {
+      path: "/blog/:id",
+      element: <><ScrollToTop/><ABlog /></>
+    },
+    {
+      path: "*",
+      element: <><ScrollToTop/><Error /></>
     },
     
   ])

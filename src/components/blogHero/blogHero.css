@@ -1,21 +1,23 @@
 .blogHeroHeading {
     font-size: 48px;
     text-align: center;
-    margin-bottom: 13px;
+    margin-bottom: 8px;
 }
 
 .blogHeroContainer {
     display: flex;
-    gap: 12px;
-    margin-bottom: 28px;
+    gap: 44px;
+    margin-bottom: 12px;
     flex-wrap: wrap;
     padding: 20px;
+    /* align-items: center; */
+    justify-content: center;
 }
 
 .blogHeroCard {
     align-items: center;
-    margin: auto;
-    width: 400px;
+    /* margin: auto; */
+    width: 350px;
     display: flex;
     flex-direction: column;
     cursor: pointer;

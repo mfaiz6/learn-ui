@@ -1,0 +1,15 @@
+import ErrorComponent from "../components/errorComponent/ErrorComponent"
+import Footer from "../components/footer/Footer"
+import Navbar from "../components/navbar/Navbar"
+
+const Error = () => {
+    return (
+        <>
+            <Navbar />
+            <ErrorComponent />
+            <Footer />
+        </>
+    )
+}
+
+export default Error
