@@ -1,0 +1,67 @@
+.blogComponentContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+}
+
+.blogComponentHeader {
+    display: flex;
+    flex-direction: column;
+    padding: 18px;
+}
+
+.blogComponentHeader>h1 {
+    font-size: 2.8vmax;
+}
+
+.blogComponentHeaderAuthor {
+    display: flex;
+    flex-direction: column;
+}
+
+.blogComponentHeaderAuthor>h3 {
+    font-size: 1.1vmax;
+    font-weight: 400;
+}
+
+.blogComponentHeaderAuthor>h5 {
+    font-size: 0.7vmax;
+    font-weight: 400;
+}
+
+.blogComponentBody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.blogComponentBodyImage>img {
+    width: 100%;
+    max-width:700px;
+    height: auto;
+}
+
+.blogComponentBodyText {
+    display: flex;
+    flex-direction: column;
+    gap: 33px;
+}
+
+.blogComponentBodyPara {
+    width: 60vmax;
+}
+
+.blogComponentBodyPara>p {
+    font-size: 1vmax;
+    text-align: justify;
+}
+
+@media (max-width: 870px) {
+    .blogComponentBodyPara {
+        width: 90vw;
+    }
+    .blogComponentBodyPara>p {
+        font-size: 100%;
+    }
+}
