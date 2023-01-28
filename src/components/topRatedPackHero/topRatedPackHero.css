@@ -29,6 +29,7 @@
     width: 21em;
     height: 15em;
     border-radius: 5%;
+    object-fit: cover;
 }
 
 .topRatedPackCardDuration{
