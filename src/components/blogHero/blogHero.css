@@ -9,15 +9,15 @@
     gap: 44px;
     margin-bottom: 12px;
     flex-wrap: wrap;
-    padding: 20px;
+    padding: 16px 0;
     /* align-items: center; */
     justify-content: center;
 }
 
 .blogHeroCard {
     align-items: center;
-    /* margin: auto; */
-    width: 350px;
+    /* margin: 0 2px; */
+    width: 330px;
     display: flex;
     flex-direction: column;
     cursor: pointer;

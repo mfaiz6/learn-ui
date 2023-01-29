@@ -7,7 +7,7 @@ import useFetch from '../../hooks/useFetch'
 
 const BlogHero = () => {
 
-    const { data, loading, error } = useFetch("/blogs/")
+    const { data, loading, error } = useFetch("/blogs/homeBlogs")
 
     console.log(data)
 
