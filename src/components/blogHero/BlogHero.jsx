@@ -2,9 +2,15 @@ import { faUserAlt } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './blogHero.css'
 import { Link } from 'react-router-dom'
+import useFetch from '../../hooks/useFetch'
 
 
 const BlogHero = () => {
+
+    const { data, loading, error } = useFetch("/blogs/")
+
+    console.log(data)
+
     return (
         <>
 
@@ -12,62 +18,20 @@ const BlogHero = () => {
 
             <div className="blogHeroContainer">
 
-                <Link to="/blog/:id"><div className="blogHeroCard">
-                    <img src="https://img.veenaworld.com/wp-content/uploads/2023/01/323572958_1139822833387959_4552667185984306423_n-scaled.jpg" alt="" />
-                    <div className="blogHeroCardDate">
-                        <p>Jan 20, 2023</p>
-                        <p><FontAwesomeIcon icon={faUserAlt} /> Sheema Bhat</p>
-                    </div>
-                    <h3>Discovering Tokyo: Where the History and Future Meet</h3>
-                </div></Link>
+                {loading ? ("Loading please wait...") : (
+                    data.map(item => (
 
-                <Link to="/blog/:id"><div className="blogHeroCard">
-                    <img src="https://img.veenaworld.com/wp-content/uploads/2023/01/Discovering-Tokyo-Where-the-History-and-Future-Meet-scaled-e1673948948775.jpg" alt="" />
-                    <div className="blogHeroCardDate">
-                        <p>Jan 20, 2023</p>
-                        <p><FontAwesomeIcon icon={faUserAlt} /> Sheema Bhat</p>
-                    </div>
-                    <h3>Discovering Tokyo: Where the History and Future Meet</h3>
-                </div></Link>
+                        <Link to="/blog/:id"><div className="blogHeroCard" key={item._id}>
+                            <img src={item.image} alt={item.title} />
+                            <div className="blogHeroCardDate">
+                                <p>{new Date(item.createdAt).toDateString()}</p>
+                                <p><FontAwesomeIcon icon={faUserAlt} /> {item.author}</p>
+                            </div>
+                            <h3>{item.title}</h3>
+                        </div></Link>
 
-                <Link to="/blog/:id"><div className="blogHeroCard">
-                    <img src="https://img.veenaworld.com/wp-content/uploads/2023/01/coleen-rivas-OZ2rS2zCjNo-unsplash-scaled.jpg" alt="" />
-                    <div className="blogHeroCardDate">
-                        <p>Jan 20, 2023</p>
-                        <p><FontAwesomeIcon icon={faUserAlt} /> Sheema Bhat</p>
-                    </div>
-                    <h3>Discovering Tokyo: Where the History and Future Meet</h3>
-                </div></Link>
-
-                <Link to="/blog/:id"><div className="blogHeroCard">
-                    <img src="https://img.veenaworld.com/wp-content/uploads/2023/01/annie-spratt-x-PFFkgIbGE-unsplash-scaled.jpg" alt="" />
-                    <div className="blogHeroCardDate">
-                        <p>Jan 20, 2023</p>
-                        <p><FontAwesomeIcon icon={faUserAlt} /> Sheema Bhat</p>
-                    </div>
-                    <h3>Discovering Tokyo: Where the History and Future Meet</h3>
-                </div></Link>
-
-                <Link to="/blog/:id"><div className="blogHeroCard">
-                    <img src="https://img.veenaworld.com/wp-content/uploads/2023/01/annie-spratt-x-PFFkgIbGE-unsplash-scaled.jpg" alt="" />
-                    <div className="blogHeroCardDate">
-                        <p>Jan 20, 2023</p>
-                        <p><FontAwesomeIcon icon={faUserAlt} /> Sheema Bhat</p>
-                    </div>
-                    <h3>Discovering Tokyo: Where the History and Future Meet</h3>
-                </div></Link>
-
-                <Link to="/blog/:id"><div className="blogHeroCard">
-                    <img src="https://img.veenaworld.com/wp-content/uploads/2023/01/coleen-rivas-OZ2rS2zCjNo-unsplash-scaled.jpg" alt="" />
-                    <div className="blogHeroCardDate">
-                        <p>Jan 20, 2023</p>
-                        <p><FontAwesomeIcon icon={faUserAlt} /> Sheema Bhat</p>
-                    </div>
-                    <h3>Discovering Tokyo: Where the History and Future Meet</h3>
-                </div></Link>
-
-
-
+                    ))
+                )}
 
             </div>
 
