@@ -1,10 +1,14 @@
-import { faBed, faBinoculars, faCab, faCoffee, faHotel, faPlane, faUtensils } from '@fortawesome/free-solid-svg-icons'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import {faBed as hotel} from '@fortawesome/free-solid-svg-icons'
+import {faPlane as ticket} from '@fortawesome/free-solid-svg-icons'
+// import { faBed, faBinoculars, faCab, faCoffee, faHotel, faPlane, faUtensils } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useLocation } from 'react-router-dom'
 import useFetch from '../../hooks/useFetch'
 import './packageComponent.css'
 
 const PackageComponent = () => {
+    library.add(hotel, ticket)
 
     const location = useLocation()
     const id = location.pathname.split("/")[2]
@@ -23,13 +27,21 @@ const PackageComponent = () => {
                         <h2>{data.duration}</h2>
                         <h3>₹{data.cheapestPrice} <span>per person</span></h3>
                         {/* <p>Includes:</p> */}
-                        <div className="packageHeaderDetailsIcons">
+
+                        {/* <div className="packageHeaderDetailsIcons">
                             <abbr title="Hotel"><FontAwesomeIcon className='packageHeaderDetailsIcon' icon={faHotel} /></abbr>
                             <abbr title="Tickets"><FontAwesomeIcon className='packageHeaderDetailsIcon' icon={faPlane} /></abbr>
                             <abbr title="Vehicle"><FontAwesomeIcon className='packageHeaderDetailsIcon' icon={faCab} /></abbr>
                             <abbr title="Meals"><FontAwesomeIcon className='packageHeaderDetailsIcon' icon={faUtensils} /></abbr>
                             <abbr title="Sight-seeing"><FontAwesomeIcon className='packageHeaderDetailsIcon' icon={faBinoculars} /></abbr>
+                        </div> */}
+
+                        <div className="packageHeaderDetailsIcons">
+                            {Array.isArray(data) ? ("Please wait") : data.benefits.map((benefit, index) => (
+                                <abbr title={benefit}><FontAwesomeIcon className='packageHeaderDetailsIcon' icon={benefit} key={index} /></abbr>
+                            ))}
                         </div>
+
                         <button className="bookNowButton">Book Now!</button>
                     </div>
 
@@ -64,7 +76,7 @@ const PackageComponent = () => {
                                 </div> */}
                             </div>
                         </div>
-                    )))} 
+                    )))}
 
 
                 </div>
