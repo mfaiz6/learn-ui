@@ -9,8 +9,6 @@ const BlogHero = () => {
 
     const { data, loading, error } = useFetch("/blogs/homeBlogs")
 
-    console.log(data)
-
     return (
         <>
 

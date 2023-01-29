@@ -1,8 +1,12 @@
 import { faBed, faBinoculars, faCab, faCoffee, faHotel, faPlane, faUtensils } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { useLocation } from 'react-router-dom'
 import './packageComponent.css'
 
 const PackageComponent = () => {
+
+    const location = useLocation()
+    console.log(location)
 
     return (
         <>
