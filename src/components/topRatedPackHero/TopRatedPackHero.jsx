@@ -35,7 +35,7 @@ const TopRatedPackHero = () => {
                             </div>
 
                             <div className="topRatedPackCardText">
-                                <Link to="/packages/:id"><h3 className='topRatedPackCardHead'>{item.name}</h3></Link>
+                                <Link to={`/packages/${item._id}`}><h3 className='topRatedPackCardHead'>{item.name}</h3></Link>
 
                                 {/* <p className="topRatedPackCardAdds">
                                     <FontAwesomeIcon icon={faUtensils} className="addIcons" />

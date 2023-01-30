@@ -1,6 +1,6 @@
 import { faBed, faBinoculars, faStar, faTaxi, faUtensils, faWifi } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Link, useLocation } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import './packagesList.css'
 import useFetch from '../../hooks/useFetch'
 

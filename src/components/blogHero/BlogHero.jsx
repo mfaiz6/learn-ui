@@ -8,18 +8,16 @@ import useFetch from '../../hooks/useFetch'
 const BlogHero = () => {
 
     const { data, loading, error } = useFetch("/blogs/homeBlogs")
-
     return (
         <>
-
             <h2 className='blogHeroHeading'>Latest Blogs</h2>
 
             <div className="blogHeroContainer">
 
                 {loading ? ("Loading please wait...") : (
-                    data.map(item => (
+                    data.map((item, index) => (
 
-                        <Link to="/blog/:id"><div className="blogHeroCard" key={item._id}>
+                        <Link to={`/blog/${item._id}`} key={index}><div className="blogHeroCard">
                             <img src={item.image} alt={item.title} />
                             <div className="blogHeroCardDate">
                                 <p>{new Date(item.createdAt).toDateString()}</p>
