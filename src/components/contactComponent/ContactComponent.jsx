@@ -1,12 +1,43 @@
 import { faBank, faLocationDot, faMailBulk, faPhone } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import axios from 'axios'
+import { useState } from 'react'
 import './contactComponent.css'
 
 const ContactComponent = () => {
+
+    const [details, setDetails] = useState({
+        name: undefined,
+        email: undefined,
+        subject: undefined,
+        message: undefined
+    })
+
+    const handleChange = (e) => {
+        setDetails((prev) => ({ ...prev, [e.target.id]: e.target.value }))
+    }
+
+    const handleSubmit = async (e) => {
+        e.preventDefault()
+        try {
+            await axios.post("/query/", details)
+            document.getElementById("querySendBtn").innerHTML = "Sent!"
+            document.getElementById("querySendBtn").style.backgroundColor = "#00337C"
+            document.getElementById("querySendBtn").style.color = "#fff"
+        } catch (error) {
+            document.getElementById("querySendBtn").innerHTML = "Please try again!"
+            document.getElementById("querySendBtn").style.backgroundColor = "red"
+            document.getElementById("querySendBtn").style.color = "white"
+
+        }
+    }
+
+
+
+
     return (
         <>
             <div className="contactContainer">
-
 
                 <div className="contactDetailsContainer">
 
@@ -111,19 +142,19 @@ const ContactComponent = () => {
                     </div>
 
                 </div>
-                
+
 
                 <hr />
 
 
-                <div className="contactFormContainer">
-
-                    <input type="text" placeholder='name' />
-                    <input type="email" placeholder='email' />
-                    <input type="text" placeholder='subject' />
-                    <input type="text" placeholder='message'></input>
-                    <button>Send</button>
-
+                <div>
+                    <form className='contactFormContainer' onSubmit={handleSubmit}>
+                        <input type="text" id='name' required placeholder='name' onChange={handleChange} />
+                        <input type="email" pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$" id='email' required placeholder='email' onChange={handleChange} />
+                        <input type="text" id='subject' required placeholder='subject' onChange={handleChange} />
+                        <input type="text" id='message' required placeholder='message' onChange={handleChange}></input>
+                        <button type='submit' id="querySendBtn">Send</button>
+                    </form>
                 </div>
 
             </div>

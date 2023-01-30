@@ -17,10 +17,8 @@ const Newsletter = () => {
                 "email": email
             })
             document.getElementById('newsLetterSuccess').innerHTML = "Subscribed!"
-
-
         } catch (error) {
-            document.getElementById('newsLetterSuccess').innerHTML = "Already there!"
+            document.getElementById('newsLetterSuccess').innerHTML = "Already a member!"
 
         }
 
@@ -41,7 +39,7 @@ const Newsletter = () => {
 
                         <input type="email" className="nLetterInput" placeholder='email' pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$" required onChange={handleChange} />
 
-                        <button type='submit' className="nLetterButton" id='newsLetterSuccess' >Subscribe</button>
+                        <button type='submit' className="nLetterButton" id='newsLetterSuccess'>Subscribe</button>
 
                     </form>
 
