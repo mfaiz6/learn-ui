@@ -1,4 +1,4 @@
-import axios from 'axios'
+import axios from '../../axios.js'
 import { useState } from 'react'
 import './newsletter.css'
 

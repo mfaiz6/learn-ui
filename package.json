@@ -1,6 +1,5 @@
 {
   "name": "ui",
-  "homepage": "https://skhi-api.onrender.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

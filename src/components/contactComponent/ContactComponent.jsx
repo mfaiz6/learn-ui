@@ -1,6 +1,7 @@
 import { faBank, faLocationDot, faMailBulk, faPhone } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import axios from 'axios'
+import axios from '../../axios.js'
+// import axios from 'axios'
 import { useState } from 'react'
 import './contactComponent.css'
 
