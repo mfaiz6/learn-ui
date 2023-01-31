@@ -27,8 +27,8 @@ const Navbar = () => {
                     <Link to="/blog"><div className="navItem">Blog</div></Link>
                     <Link to="/about"><div className="navItem">About</div></Link>
                     <Link to="/contact"><div className="navItem">Contact</div></Link>
-                    <Link to="/signin"><div className="navItem">Signin</div></Link>
-                    <Link to="/signup"><div className="navItem">Signup</div></Link>
+                    {/* <Link to="/signin"><div className="navItem">Signin</div></Link> */}
+                    {/* <Link to="/signup"><div className="navItem">Signup</div></Link> */}
 
                     <Link to="/queryModal"><button className='enquiryButton' >Enquire Now</button></Link>
 
