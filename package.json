@@ -1,6 +1,6 @@
 {
   "name": "ui",
-  "homepage": "https://skhi-api.onrender.com/api",
+  "homepage": "https://skhi-api.onrender.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -43,6 +43,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "proxy": "https://skhi-api.onrender.com/api"
+  }
 }
