@@ -69,13 +69,14 @@ h3>span {
 
 }
 
-.packageHeaderDetailsPersonsCount>span {
+.packageHeaderDetailsPersonsCount>h5 {
     margin-top: 12px;
     background-color: blue;
     color: white;
     width: fit-content;
     border: 1px solid black;
     padding: 2px;
+    font-size: 16px;
 }
 
 .packageHeaderDetailsPersonsCount>button {

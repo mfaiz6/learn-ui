@@ -7,6 +7,7 @@ import { useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import useFetch from '../../hooks/useFetch'
 import './packageComponent.css'
+import axios from '../../axios.js'
 
 const PackageComponent = () => {
     library.add(hotel, ticket)
@@ -16,8 +17,59 @@ const PackageComponent = () => {
 
     const { data, loading, error } = useFetch(`/packages/package/${id}`)
 
-    const [value, setValue] = useState("1")
+    const [value, setValue] = useState("0")
 
+    const [finalValue, setFinalValue] = useState(0)
+
+    const initPayment = (data) => {
+        const options = {
+            key: "rzp_test_QeQmUpvqg2ojI7",
+            amount: data.amount,
+            currency: data.currency,
+            name: "test package",
+            description: "test transaction",
+            image: "https://images-na.ssl-images-amazon.com/images/I/817tHNcyAgL.jpg",
+            order_id: data.id,
+            handler: async (response) => {
+                try {
+                    const { data } = await axios.post("/payment/verify", response)
+                    alert(data.message)
+                } catch (error) {
+                    console.log(error)
+                }
+            },
+            theme: {
+                color: "#FFD800",
+            },
+        }
+        const rzp1 = new window.Razorpay(options);
+        rzp1.open();
+    }
+
+
+    const handlePayment = async (e) => {
+        e.preventDefault()
+        try {
+            const finalPrice = finalValue
+            const productId = id
+            const quantity = value
+            const check = await axios.post("/payment/validatePrice", { finalPrice, productId, quantity })
+            if (check) {
+                const { data } = await axios.post("/payment/orders", { amount: finalPrice })
+                console.log(data)
+                initPayment(data.data)
+                
+            }
+        } catch (error) {
+            console.log(error);
+        }
+        // try {
+        //     const data = await axios.post("/payment/orders", { amount: finalValue })
+        //     console.log(data)
+        // } catch (error) {
+        //     console.log(error)
+        // }
+    }
 
 
 
@@ -49,10 +101,10 @@ const PackageComponent = () => {
                         </div>
 
                         <div className="packageHeaderDetailsPersonsCount">
-                            <form className='packageHeaderDetailsPersonsCount'>
+                            <form onSubmit={handlePayment} className='packageHeaderDetailsPersonsCount'>
                                 <label>Number of persons:</label>
-                                <input type="number" id='totalPersons' value={value} min="1" onChange={e => setValue(e.target.value)} required />
-                                <span id="totalAmount">Total ₹{data.cheapestPrice * value}</span>
+                                <input type="number" id='totalPersons' value={value} min="1" onChange={(e) => { setValue(e.target.value); setFinalValue(data.cheapestPrice * e.target.value) }} required />
+                                <h5>Total ₹<span id="totalAmount">{finalValue}</span></h5>
                                 <button type='submit' className="bookNowButton">Book Now!</button>
                             </form>
                         </div>
