@@ -26,7 +26,7 @@ const QueryModalComponent = () => {
         e.preventDefault()
         try {
             await axios.post("/quoteQuery/", details)
-            const btn = document.getElementById("quoteQuerySendBtn")
+            // const btn = document.getElementById("quoteQuerySendBtn")
             document.getElementById("quoteQuerySendBtn").value = "Sent!"
             document.getElementById("quoteQuerySendBtn").style.backgroundColor = "#00337C"
             document.getElementById("quoteQuerySendBtn").style.color = "#fff"

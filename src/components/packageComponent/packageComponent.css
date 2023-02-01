@@ -57,7 +57,28 @@ h3>span {
     cursor: pointer;
 }
 
-.bookNowButton {
+.packageHeaderDetailsPersonsCount {
+    display: flex;
+    flex-direction: column;
+}
+
+.packageHeaderDetailsPersonsCount>input {
+    width: 60px;
+    border-radius: 22px;
+    text-align: center;
+
+}
+
+.packageHeaderDetailsPersonsCount>span {
+    margin-top: 12px;
+    background-color: blue;
+    color: white;
+    width: fit-content;
+    border: 1px solid black;
+    padding: 2px;
+}
+
+.packageHeaderDetailsPersonsCount>button {
     margin-bottom: 10px;
     padding: 15px 30px;
     /* background-color: #00337C; */
@@ -69,6 +90,7 @@ h3>span {
     font-size: 16px;
     margin-top: 30px;
     border: none;
+    width: fit-content;
 
 }
 

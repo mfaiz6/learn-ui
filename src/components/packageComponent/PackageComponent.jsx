@@ -1,8 +1,9 @@
 import { library } from '@fortawesome/fontawesome-svg-core'
-import {faBed as hotel} from '@fortawesome/free-solid-svg-icons'
-import {faPlane as ticket} from '@fortawesome/free-solid-svg-icons'
+import { faBed as hotel } from '@fortawesome/free-solid-svg-icons'
+import { faPlane as ticket } from '@fortawesome/free-solid-svg-icons'
 // import { faBed, faBinoculars, faCab, faCoffee, faHotel, faPlane, faUtensils } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import useFetch from '../../hooks/useFetch'
 import './packageComponent.css'
@@ -15,6 +16,11 @@ const PackageComponent = () => {
 
     const { data, loading, error } = useFetch(`/packages/package/${id}`)
 
+    const [value, setValue] = useState("1")
+
+
+
+
     return (
         <>
             <div className="packageContainer">
@@ -25,7 +31,7 @@ const PackageComponent = () => {
                     <div className="packageHeaderDetails">
                         <h1>{data.name}</h1>
                         <h2>{data.duration}</h2>
-                        <h3>₹{data.cheapestPrice} <span>per person</span></h3>
+                        <h3 id='cheapestPrice'>₹{data.cheapestPrice} <span>per person</span></h3>
                         {/* <p>Includes:</p> */}
 
                         {/* <div className="packageHeaderDetailsIcons">
@@ -42,7 +48,15 @@ const PackageComponent = () => {
                             ))}
                         </div>
 
-                        <button className="bookNowButton">Book Now!</button>
+                        <div className="packageHeaderDetailsPersonsCount">
+                            <form className='packageHeaderDetailsPersonsCount'>
+                                <label>Number of persons:</label>
+                                <input type="number" id='totalPersons' value={value} min="1" onChange={e => setValue(e.target.value)} required />
+                                <span id="totalAmount">Total ₹{data.cheapestPrice * value}</span>
+                                <button type='submit' className="bookNowButton">Book Now!</button>
+                            </form>
+                        </div>
+
                     </div>
 
 
