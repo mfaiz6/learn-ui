@@ -19,6 +19,7 @@ const PackageComponent = () => {
 
     const [value, setValue] = useState("0")
 
+
     const [finalValue, setFinalValue] = useState(0)
 
     const initPayment = (data) => {
@@ -85,8 +86,8 @@ const PackageComponent = () => {
                         <h2>{data.duration}</h2>
                         <h3 id='cheapestPrice'>₹{data.cheapestPrice} <span>per person</span></h3>
                         {/* <p>Includes:</p> */}
-
-                        {/* <div className="packageHeaderDetailsIcons">
+{/* 
+                        <div className="packageHeaderDetailsIcons">
                             <abbr title="Hotel"><FontAwesomeIcon className='packageHeaderDetailsIcon' icon={faHotel} /></abbr>
                             <abbr title="Tickets"><FontAwesomeIcon className='packageHeaderDetailsIcon' icon={faPlane} /></abbr>
                             <abbr title="Vehicle"><FontAwesomeIcon className='packageHeaderDetailsIcon' icon={faCab} /></abbr>
@@ -102,8 +103,9 @@ const PackageComponent = () => {
 
                         <div className="packageHeaderDetailsPersonsCount">
                             <form onSubmit={handlePayment} className='packageHeaderDetailsPersonsCount'>
-                                <label>Number of persons:</label>
+                                <label>Number of Adults:</label>
                                 <input type="number" id='totalPersons' value={value} min="1" onChange={(e) => { setValue(e.target.value); setFinalValue(data.cheapestPrice * e.target.value) }} required />
+                                
                                 <h5>Total ₹<span id="totalAmount">{finalValue}</span></h5>
                                 <button type='submit' className="bookNowButton">Book Now!</button>
                             </form>
