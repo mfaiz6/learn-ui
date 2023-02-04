@@ -64,7 +64,7 @@ const PackagesList = () => {
                             </div>
 
                             <div className="packageListItemPrice">
-                                <h5>₹{item.cheapestPrice}</h5>
+                                <h5>₹{item.cheapestAdultPrice}</h5>
                                 <h6>excludes taxes</h6>
                                 <Link to={`/packages/${item._id}`}><button className='pacakgeListItemButton'>Know More</button></Link>
                             </div>

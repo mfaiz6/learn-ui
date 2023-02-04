@@ -61,7 +61,7 @@ const TopRatedPackHero = () => {
                                     <FontAwesomeIcon icon={icons.faStar} className="star" />
                                 </p>
                                 <h4 className="topRatedPackCardOPrice">{item.originalPrice}</h4>
-                                <h4 className="topRatedPackCardNPrice">{item.cheapestPrice} <span>per person</span></h4>
+                                <h4 className="topRatedPackCardNPrice">₹{item.cheapestAdultPrice} <span>per person</span></h4>
                             </div>
 
                         </div>

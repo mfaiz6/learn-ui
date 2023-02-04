@@ -19,8 +19,11 @@ const PackageComponent = () => {
 
     const [value, setValue] = useState("0")
 
+    const [childrenValue, setChildrenValue] = useState("0")
+
 
     const [finalValue, setFinalValue] = useState(0)
+    const [finalChildValue, setFinalChildValue] = useState(0)
 
     const initPayment = (data) => {
         const options = {
@@ -52,24 +55,20 @@ const PackageComponent = () => {
         e.preventDefault()
         try {
             const finalPrice = finalValue
+            const finalChildPrice = finalChildValue
             const productId = id
             const quantity = value
-            const check = await axios.post("/payment/validatePrice", { finalPrice, productId, quantity })
+            const childValue = childrenValue
+            const check = await axios.post("/payment/validatePrice", { finalPrice, finalChildPrice, productId, quantity, childValue })
             if (check) {
-                const { data } = await axios.post("/payment/orders", { amount: finalPrice })
+                const { data } = await axios.post("/payment/orders", { amount: finalPrice + finalChildPrice })
                 console.log(data)
                 initPayment(data.data)
-                
             }
         } catch (error) {
-            console.log(error);
+            alert(error.response.data);
         }
-        // try {
-        //     const data = await axios.post("/payment/orders", { amount: finalValue })
-        //     console.log(data)
-        // } catch (error) {
-        //     console.log(error)
-        // }
+      
     }
 
 
@@ -84,9 +83,10 @@ const PackageComponent = () => {
                     <div className="packageHeaderDetails">
                         <h1>{data.name}</h1>
                         <h2>{data.duration}</h2>
-                        <h3 id='cheapestPrice'>₹{data.cheapestPrice} <span>per person</span></h3>
+                        <h3 id='cheapestPrice'>₹{data.cheapestAdultPrice} <span>per person</span></h3>
+                        <h3 id='cheapestPrice'>₹{data.childPrice} <span>per child (5-12 years old)</span></h3>
                         {/* <p>Includes:</p> */}
-{/* 
+                        {/* 
                         <div className="packageHeaderDetailsIcons">
                             <abbr title="Hotel"><FontAwesomeIcon className='packageHeaderDetailsIcon' icon={faHotel} /></abbr>
                             <abbr title="Tickets"><FontAwesomeIcon className='packageHeaderDetailsIcon' icon={faPlane} /></abbr>
@@ -104,9 +104,12 @@ const PackageComponent = () => {
                         <div className="packageHeaderDetailsPersonsCount">
                             <form onSubmit={handlePayment} className='packageHeaderDetailsPersonsCount'>
                                 <label>Number of Adults:</label>
-                                <input type="number" id='totalPersons' value={value} min="1" onChange={(e) => { setValue(e.target.value); setFinalValue(data.cheapestPrice * e.target.value) }} required />
-                                
-                                <h5>Total ₹<span id="totalAmount">{finalValue}</span></h5>
+                                <input type="number" id='totalPersons' value={value} min="1" onChange={(e) => { setValue(e.target.value); setFinalValue(data.cheapestAdultPrice * e.target.value) }} required />
+
+                                <label>Number of Children(5-12 years):</label>
+                                <input type="number" id="" min="0" value={childrenValue} onChange={(e) => { setChildrenValue(e.target.value); setFinalChildValue(data.childPrice * e.target.value) }} required />
+
+                                <h5>Total ₹<span id="totalAmount">{finalValue + finalChildValue}</span></h5>
                                 <button type='submit' className="bookNowButton">Book Now!</button>
                             </form>
                         </div>
