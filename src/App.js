@@ -6,7 +6,7 @@ import Contact from './pages/Contact';
 import Blog from './pages/Blog';
 import Packages from './pages/Packages';
 import Signin from './pages/Signin';
-import Singup from './pages/Singup';
+// import Singup from './pages/Singup';
 import QueryModal from './pages/QueryModal';
 import ScrollToTop from '../src/components/ScrollToTop.jsx'
 import Package from './pages/Package';
@@ -38,14 +38,14 @@ function App() {
       path: "/packages",
       element: <><ScrollToTop/><Packages /></>
     },
-    {
-      path: "/signin",
-      element: <><ScrollToTop/><Signin /></>
-    },
-    {
-      path: "/signup",
-      element: <><ScrollToTop/><Singup /></>
-    },
+    // {
+    //   path: "/signin",
+    //   element: <><ScrollToTop/><Signin /></>
+    // },
+    // {
+    //   path: "/signup",
+    //   element: <><ScrollToTop/><Singup /></>
+    // },
     {
       path: "/queryModal",
       element: <><ScrollToTop/><QueryModal /></>
@@ -59,9 +59,13 @@ function App() {
       element: <><ScrollToTop/><ABlog /></>
     },
     {
+      path: "/admin",
+      element: <><ScrollToTop/><Signin /></>
+    },
+    {
       path: "*",
       element: <><ScrollToTop/><Error /></>
-    },
+    }
     
   ])
 
