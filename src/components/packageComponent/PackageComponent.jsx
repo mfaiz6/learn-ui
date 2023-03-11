@@ -1,75 +1,75 @@
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { faBed as hotel } from '@fortawesome/free-solid-svg-icons'
-import { faPlane as ticket } from '@fortawesome/free-solid-svg-icons'
-// import { faBed, faBinoculars, faCab, faCoffee, faHotel, faPlane, faUtensils } from '@fortawesome/free-solid-svg-icons'
+import { faBed, faBinoculars, faCab, faCoffee, faHotel, faPlane, faUtensils } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useState } from 'react'
 import { useLocation } from 'react-router-dom'
-import useFetch from '../../hooks/useFetch'
+// import useFetch from '../../hooks/useFetch'
 import './packageComponent.css'
 import axios from '../../axios.js'
+import { packages } from '../../data/packages'
+
 
 const PackageComponent = () => {
-    library.add(hotel, ticket)
 
     const location = useLocation()
     const id = location.pathname.split("/")[2]
 
-    const { data, loading, error } = useFetch(`/packages/package/${id}`)
+    // const { data, loading, error } = useFetch(`/packages/package/${id}`)
+    const data = packages[id]
+    
 
-    const [value, setValue] = useState("0")
+    // const [value, setValue] = useState("0")
 
-    const [childrenValue, setChildrenValue] = useState("0")
-
-
-    const [finalValue, setFinalValue] = useState(0)
-    const [finalChildValue, setFinalChildValue] = useState(0)
-
-    const initPayment = (data) => {
-        const options = {
-            key: "rzp_test_QeQmUpvqg2ojI7",
-            amount: data.amount,
-            currency: data.currency,
-            name: "test package",
-            description: "test transaction",
-            image: "https://images-na.ssl-images-amazon.com/images/I/817tHNcyAgL.jpg",
-            order_id: data.id,
-            handler: async (response) => {
-                try {
-                    const { data } = await axios.post("/payment/verify", response)
-                    alert(data.message)
-                } catch (error) {
-                    console.log(error)
-                }
-            },
-            theme: {
-                color: "#FFD800",
-            },
-        }
-        const rzp1 = new window.Razorpay(options);
-        rzp1.open();
-    }
+    // const [childrenValue, setChildrenValue] = useState("0")
 
 
-    const handlePayment = async (e) => {
-        e.preventDefault()
-        try {
-            const finalPrice = finalValue
-            const finalChildPrice = finalChildValue
-            const productId = id
-            const quantity = value
-            const childValue = childrenValue
-            const check = await axios.post("/payment/validatePrice", { finalPrice, finalChildPrice, productId, quantity, childValue })
-            if (check) {
-                const { data } = await axios.post("/payment/orders", { amount: finalPrice + finalChildPrice })
-                console.log(data)
-                initPayment(data.data)
-            }
-        } catch (error) {
-            alert(error.response.data);
-        }
+    // const [finalValue, setFinalValue] = useState(0)
+    // const [finalChildValue, setFinalChildValue] = useState(0)
+
+    // const initPayment = (data) => {
+    //     const options = {
+    //         key: "rzp_test_QeQmUpvqg2ojI7",
+    //         amount: data.amount,
+    //         currency: data.currency,
+    //         name: "test package",
+    //         description: "test transaction",
+    //         image: "https://images-na.ssl-images-amazon.com/images/I/817tHNcyAgL.jpg",
+    //         order_id: data.id,
+    //         handler: async (response) => {
+    //             try {
+    //                 const { data } = await axios.post("/payment/verify", response)
+    //                 alert(data.message)
+    //             } catch (error) {
+    //                 console.log(error)
+    //             }
+    //         },
+    //         theme: {
+    //             color: "#FFD800",
+    //         },
+    //     }
+    //     const rzp1 = new window.Razorpay(options);
+    //     rzp1.open();
+    // }
+
+
+    // const handlePayment = async (e) => {
+    //     e.preventDefault()
+    //     try {
+    //         const finalPrice = finalValue
+    //         const finalChildPrice = finalChildValue
+    //         const productId = id
+    //         const quantity = value
+    //         const childValue = childrenValue
+    //         const check = await axios.post("/payment/validatePrice", { finalPrice, finalChildPrice, productId, quantity, childValue })
+    //         if (check) {
+    //             const { data } = await axios.post("/payment/orders", { amount: finalPrice + finalChildPrice })
+    //             console.log(data)
+    //             initPayment(data.data)
+    //         }
+    //     } catch (error) {
+    //         alert(error.response.data);
+    //     }
       
-    }
+    // }   
 
 
 
@@ -86,14 +86,14 @@ const PackageComponent = () => {
                         <h3 id='cheapestPrice'>₹{data.cheapestAdultPrice} <span>per person</span></h3>
                         <h3 id='cheapestPrice'>₹{data.childPrice} <span>per child (5-12 years old)</span></h3>
                         {/* <p>Includes:</p> */}
-                        {/* 
+                        
                         <div className="packageHeaderDetailsIcons">
                             <abbr title="Hotel"><FontAwesomeIcon className='packageHeaderDetailsIcon' icon={faHotel} /></abbr>
                             <abbr title="Tickets"><FontAwesomeIcon className='packageHeaderDetailsIcon' icon={faPlane} /></abbr>
                             <abbr title="Vehicle"><FontAwesomeIcon className='packageHeaderDetailsIcon' icon={faCab} /></abbr>
                             <abbr title="Meals"><FontAwesomeIcon className='packageHeaderDetailsIcon' icon={faUtensils} /></abbr>
                             <abbr title="Sight-seeing"><FontAwesomeIcon className='packageHeaderDetailsIcon' icon={faBinoculars} /></abbr>
-                        </div> */}
+                        </div>
 
                         <div className="packageHeaderDetailsIcons">
                             {Array.isArray(data) ? ("Please wait") : data.benefits.map((benefit, index) => (
@@ -101,7 +101,7 @@ const PackageComponent = () => {
                             ))}
                         </div>
 
-                        <div className="packageHeaderDetailsPersonsCount">
+                        {/* <div className="packageHeaderDetailsPersonsCount">
                             <form onSubmit={handlePayment} className='packageHeaderDetailsPersonsCount'>
                                 <label>Number of Adults:</label>
                                 <input type="number" id='totalPersons' value={value} min="1" onChange={(e) => { setValue(e.target.value); setFinalValue(data.cheapestAdultPrice * e.target.value) }} required />
@@ -112,7 +112,7 @@ const PackageComponent = () => {
                                 <h5>Total ₹<span id="totalAmount">{finalValue + finalChildValue}</span></h5>
                                 <button type='submit' className="bookNowButton">Book Now!</button>
                             </form>
-                        </div>
+                        </div> */}
 
                     </div>
 
@@ -136,10 +136,10 @@ const PackageComponent = () => {
 
                     {Array.isArray(data) ? ("Please wait") : (data.days.map((i, index) => (
                         <div className="packageDayWiseDetailsDay" key={index}>
-                            <img src="https://news.thrillophilia.com/content/images/size/w2000/2022/07/Artboard-8-1.jpg" alt="" />
+                            <img src={i.image} alt="" />
                             <div className="packageDayWiseDetailsDayText">
-                                <h3>Day {index + 1}Srinagar (Houseboat)</h3>
-                                <p>{i}</p>
+                                <h3>Day {index + 1}</h3>
+                                <p>{i.desc}</p>
                                 {/* <div className="packageDayWiseDetailsDayIcons">
                                     <abbr title="Hotel"><FontAwesomeIcon className='packageHeaderDetailsIcon' icon={faHotel} /></abbr>
                                     <abbr title="Tickets"><FontAwesomeIcon className='packageHeaderDetailsIcon' icon={faBed} /></abbr>

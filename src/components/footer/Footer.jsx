@@ -34,10 +34,10 @@ const Footer = () => {
                     </div>
 
                     <div className="socialDetails">
-                        <span><FontAwesomeIcon icon={faFacebook} /></span>
-                        <span><FontAwesomeIcon icon={faInstagram} /></span>
-                        <span><FontAwesomeIcon icon={faTwitter} /></span>
-                        <span><FontAwesomeIcon icon={faWhatsapp} /></span>
+                    <a href="https://www.facebook.com/snowkashmirholiday/" target="_blank" rel='noreferrer'><span><FontAwesomeIcon icon={faFacebook} /></span></a>
+                        <a href="https://www.instagram.com/snowkashmirholiday/" target="_blank" rel='noreferrer'><span><FontAwesomeIcon icon={faInstagram} /></span></a>
+                        <a href="https://www.twitter.com/SNOWKASHMIR" target="_blank" rel="noreferrer"><span><FontAwesomeIcon icon={faTwitter} /></span></a>
+                        <a href="https://wa.me/917889865676" target="_blank" rel='noreferrer'><span><FontAwesomeIcon icon={faWhatsapp} /></span></a>
                     </div>
 
                 </div>

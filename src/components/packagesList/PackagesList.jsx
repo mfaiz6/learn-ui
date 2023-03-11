@@ -2,11 +2,13 @@ import { faBed, faBinoculars, faStar, faTaxi, faUtensils, faWifi } from '@fortaw
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link } from 'react-router-dom'
 import './packagesList.css'
-import useFetch from '../../hooks/useFetch'
+// import useFetch from '../../hooks/useFetch'
+import { packages } from '../../data/packages'
 
 const PackagesList = () => {
 
-    const { loading, data, error } = useFetch("/packages/")
+    // const { loading, data, error } = useFetch("/packages/")
+    const data = packages
 
     return (
         <>
@@ -20,7 +22,7 @@ const PackagesList = () => {
 
             <div className="packagesListContainer">
 
-                {loading ? ("Loading please wait...") : (
+                {
                     data.map(item => (
                         <div className="packageListItem" key={item._id}>
 
@@ -66,13 +68,13 @@ const PackagesList = () => {
                             <div className="packageListItemPrice">
                                 <h5>₹{item.cheapestAdultPrice}</h5>
                                 <h6>excludes taxes</h6>
-                                <Link to={`/packages/${item._id}`}><button className='pacakgeListItemButton'>Know More</button></Link>
+                                <Link to={`/packages/${item.id}`}><button className='pacakgeListItemButton'>Know More</button></Link>
                             </div>
 
 
                         </div>
                     ))
-                )}
+                }
 
 
 

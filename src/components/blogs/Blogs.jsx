@@ -1,13 +1,14 @@
 import { faUserAlt } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link } from 'react-router-dom'
-import useFetch from '../../hooks/useFetch'
+// import useFetch from '../../hooks/useFetch'
 import './blogs.css'
+import { blogs } from '../../data/blogs'
 
 const Blogs = () => {
 
-    const { data, loading, error } = useFetch("/blogs/")
-
+    // const { data, loading, error } = useFetch("/blogs/")
+const data = blogs
     return (
         <>
 
@@ -16,7 +17,7 @@ const Blogs = () => {
             <div className="blogsContainer">
 
                 {data.map((item, index) => (
-                    <Link to={`/blog/${item._id}`} key={index}><div className="blogsCard">
+                    <Link to={`/blog/${item.id}`} key={index}><div className="blogsCard">
                         <img src={item.image} alt="" />
                         <div className="blogsCardDate">
                             <p>{new Date(item.createdAt).toDateString()}</p>

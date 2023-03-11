@@ -1,13 +1,15 @@
 import { useLocation } from 'react-router-dom'
-import useFetch from '../../hooks/useFetch'
+// import useFetch from '../../hooks/useFetch'
 import './blogComponent.css'
+import { blogs } from '../../data/blogs'
 
 const BlogComponent = () => {
 
     const location = useLocation()
     const id = location.pathname.split("/")[2]
 
-    const { data, loading, error } = useFetch(`/blogs/blog/${id}`)
+    // const { data, loading, error } = useFetch(`/blogs/blog/${id}`)
+    const data = blogs[id]
 
     return (
         <>

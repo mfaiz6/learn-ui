@@ -48,7 +48,7 @@
     cursor: pointer;
 }
 
-.socialDetails>span:hover {
+.socialDetails>a:hover {
     color: #FFD800;
 }
 
